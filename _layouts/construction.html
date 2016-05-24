@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+	{% include head.html %}
+	<body>
+		<h2>Thanks for coming!</h2>
+		<h3>I'm doing some work on the site, so please check back very soon</h3>
+		<ul class="social-media-list">
+			<h4>Follow my progress on github</h4>
+			<li>{% include icon-github.html username=site.github_username %}</li>
+			<h4>Or follow me on Twitter</h4>
+			<li>{% include icon-twitter.html username=site.twitter_username %}</li>
+			</ul>
+			<ul class="contact-list">
+				<h4>Or Email me</h4>
+          	<li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+	        </ul>
+			
+		
+	</body>
+</html>
