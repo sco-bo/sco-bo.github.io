@@ -4,6 +4,7 @@ email: scottebobbitt@gmail.com
 description: Ruby on Rails Developer
 baseurl: ""
 url: "http://scottebobbitt.me"
+# permalink: pretty
 twitter_username: scottebobbitt
 github_username:  sco-bo
 sass:
