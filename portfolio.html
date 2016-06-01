@@ -5,13 +5,20 @@ description: Things I've Built
 parent: <!-- if building breadcrumb --> 
 ---
 
-<div class="row small-up-2 medium-up-3 large-up-4">
-	<div class="column">
-		<img class="thumbnail" src="http://placehold.it/550x550">
-		<h5>My Site</h5>
+{% for projects in site.data.projects %}
+<article class="projects-card row wide">
+    <div class="large-6 columns">
+      <div class="row">
+        <div class="small-12 columns img-wrapper">
+        	<a href="{{ projects.icon }}"><img src="{{ projects.icon }}" alt="{{ projects.alt }}"></a>
+        </div>
+      </div>
+    </div>
+    <div class="large-6 columns">
+      <h3>{{ projects.title }}</h3>
+      <p>{{ projects.description }}</p>
+      <a class="button" href="{{ projects.url }}">View in Action »</a><br>
+      <a class="button" href="{{ projects.gh }}">View project on GitHub <i class="fi-social-github size-24"></i></a>
 	</div>
-	<div class="column">
-		<img class="thumbnail" src="http://placehold.it/550x550">
-		<h5>My Site</h5>
-	</div>
-</div>
+</article>
+  {% endfor %}

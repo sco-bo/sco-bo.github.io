@@ -1,0 +1,20 @@
+- title: Fake Book
+  description: "A Facebook clone which communicates with the Facebook API, allowing users to sign in via Facebook or via Devise. When signed in, users can request, accept, decline, rescind, and end friendships. They can also create, comment on, and like posts."
+  icon: ../img/fake_book/Post1.png
+  alt: "Fake Book posts, comments and likes"
+  url: https://hidden-chamber-98363.herokuapp.com/
+  gh: https://github.com/sco-bo/fake_book
+
+- title: Flickr Widget
+  description: "Enter a Flickr User's ID to see 100 of their photos displayed in a beautiful, responsive masonry grid. This app communicates with the Flickr API to retrieve photos and also supports user ID lookup"
+  icon: ../img/flickr/Flickr_screenshot.png
+  alt: Flickr photo grid for a particular user
+  url: https://secure-refuge-22481.herokuapp.com/
+  gh: https://github.com/sco-bo/flickr_widget
+
+- title: Flight Booker
+  description: "Flight booking app in which users search for and choose a flight, enter relevant passenger information, and after submission receive confirmation emails for their particular flight."
+  icon: ../img/flight_booker/Search.png
+  alt: Flight Booker App
+  url: https://radiant-fortress-17197.herokuapp.com/
+  gh: https://github.com/sco-bo/flight-booker
