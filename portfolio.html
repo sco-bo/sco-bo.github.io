@@ -6,19 +6,19 @@ parent: <!-- if building breadcrumb -->
 ---
 
 {% for projects in site.data.projects %}
-<article class="projects-card row wide">
-    <div class="large-6 columns">
-      <div class="row">
-        <div class="small-12 columns img-wrapper">
-        	<a href="{{ projects.icon }}"><img src="{{ projects.icon }}" alt="{{ projects.alt }}"></a>
+  <article class="projects-card row wide">
+      <div class="large-6 columns">
+        <div class="row">
+          <div class="small-12 columns img-wrapper">
+          	<a href="{{ projects.icon }}"><img src="{{ projects.icon }}" alt="{{ projects.alt }}"></a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="large-6 columns">
-      <h3>{{ projects.title }}</h3>
-      <p>{{ projects.description }}</p>
-      <a class="button" href="{{ projects.url }}">View in Action »</a><br>
-      <a class="button" href="{{ projects.gh }}">View project on GitHub <i class="fi-social-github size-24"></i></a>
-	</div>
-</article>
-  {% endfor %}
+      <div class="large-6 columns">
+        <h3>{{ projects.title }}</h3>
+        <p>{{ projects.description }}</p>
+        <a class="button" href="{{ projects.url }}">View in Action »</a><br>
+        <a class="button" href="{{ projects.gh }}">View project on GitHub <i class="fi-social-github size-24"></i></a>
+  	</div>
+  </article>
+{% endfor %}

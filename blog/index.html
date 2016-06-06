@@ -1,0 +1,22 @@
+---
+layout: default
+title: Blog
+description: Things I Write
+parent: <!-- if building breadcrumb --> 
+---
+
+<div class="row full">
+  <div class="content medium-12 large-9 columns">
+    <h4>Recent Posts</h4>
+
+    {% for post in site.posts %}
+      <article class="post">
+        <h2>{{ post.title }}</h2>
+        <!-- <p class="subheader"><a href="#"><span class="jekyll label">Jekyll</span></a> <a href="#"><span class="github label">GitHub</span></a></p> -->
+        <p>{{ post.content | strip_html | truncatewords: 35}}</p>
+        <a href="{{post.url}}" class="ghost button">Read it &rarrlp;</a>
+      </article>
+      <hr>
+    {% endfor %}
+  </div>
+</div>
