@@ -73,4 +73,6 @@ We now need to add and commit the changes we've made and push them up to Github.
 
 It may take a few seconds, but now when you point your browser to **yourusername.github.io** (in my case sco-bo.github.io) you will see your new Jekyll site there! Next comes the exciting part, making this site your own and styling it to be a true reflection of you! To learn more about some of the great features and general structure of Jekyll, consider checking out this video, which was quite helpful to me: 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qJQNJcm-edk" frameborder="0" allowfullscreen></iframe>
+<div class="flex-video">
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/qJQNJcm-edk" frameborder="0" allowfullscreen></iframe>
+</div>

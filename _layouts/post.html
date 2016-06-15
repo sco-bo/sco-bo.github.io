@@ -1,16 +1,32 @@
----
-layout: default
----
-{% include base.html %}
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<!doctype html>
+<html class lang="en">
+  {% include base.html %}
+  {% include head.html %}
+  <body>
+  	<div class="row">
+  		<div class="large-12 columns">
+  			{% include callout.html %}
+  		</div>
+  	</div>
+  	
+  	<article class="post">
+  		<div class="row">
+  			<div class="large-12 large-centered columns">
+					<header class="post-header text-center">
+		  			  <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+		  			  <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+		  			</header>
+				</div>
+			<div class="row">
+				<div class="small-10 large-8 small-centered columns">
+	  			<div class="post-content" itemprop="articleBody">
+	  			  {{ content }}
+	  			</div>
+  			</div>
+			</div>
+		</div>
+  	</article>
+  	
+  </body>
+</html>
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
-
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-
-</article>

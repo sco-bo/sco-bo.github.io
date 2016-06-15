@@ -177,7 +177,7 @@ footer {
 }
 
 .gist {
-  width: 500px;
+  width: auto;
 }
 // center
 
@@ -189,6 +189,27 @@ footer {
 
 
 // blog 
+
+// article {
+//   .container {
+//     width: 700px; 
+//     margin: 0 auto;
+//   }
+// }
+
+.flex-video {
+  padding-bottom: 56.34%;
+}
+
+// article {
+//   .row {
+//     .container {
+//       width: 100%;
+//       margin: auto;
+//       max-width: 62.5em;
+//     }
+//   }
+// }
 
 .subheader {
   .label {
@@ -226,8 +247,11 @@ footer {
   }
 }
 
-.row.full {
-  max-width: 100%;
+.row {
+  // max-width: 100%;
+  .full {
+    max-width: 100%;
+  }
 }
 
 .content {
