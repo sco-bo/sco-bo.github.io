@@ -58,8 +58,8 @@
   } 
 }
 
-.off-canvas-content {
-  margin-bottom: 110px;
+.off-canvas-content, .post-content {
+  margin-bottom: 85px;
 }
 
 footer {
@@ -70,6 +70,7 @@ footer {
   box-shadow: 0 0 10px rgba(10,10,10,0.5);
   background: #333;
   ul {
+    line-height: 0;
     display: inline-block;
     margin: 0;
     padding: 0;
