@@ -49,6 +49,9 @@
 @import 'components/thumbnail';
 @import 'components/tooltip';
 
+// Syntax
+@import 'syntax-highlighting';
+
 @mixin foundation-everything($flex: false) {
   @if $flex {
     $global-flexbox: true !global;

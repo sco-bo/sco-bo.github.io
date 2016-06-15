@@ -12,7 +12,14 @@ One of the many great features of Jekyll is that it sets up the framework for yo
 
 When data is needed, such as data that would ordinarily have been pulled from a database, Jekyll utilizes Liquid Tags and YAML data files to serve that content, looping through it, much like a 'for loop':
 
-{% gist 7616a164e65aedb5cb826d16f0afce64 %}
+{% highlight liquid %}
+{% raw %}
+{% for projects in site.data.projects %}
+    <h3>{{ projects.title }}</h3>
+    <p>{{ projects.description }}</p>
+{% endfor %}
+{% endraw %}
+{% endhighlight %}
 
 In this blog entry we'll  go into setting up a personal site using Jekyll and using GitHub Pages as our [host](https://en.wikipedia.org/wiki/Web_hosting_service). 
 
@@ -29,25 +36,35 @@ Let's start by creating a new repository on GitHub. The name of this repository 
 ### Step 2
 Open your terminal window. Navigate to the folder where you want to store your website folder and all of its content. Then, in your terminal type `mkdir` followed by your github repo name. In my case: 
 
-    mkdir sco-bo.github.io
+{% highlight shell %}
+~ $ mkdir sco-bo.github.io
+{% endhighlight %}
 
 Now, `cd` into this folder and in your terminal type: 
-	
-    git init
+
+{% highlight shell %}
+~ $ git init
+{% endhighlight %}
 
 then type `git remote add origin` and paste the link you copied from step 1. So in my case, it looks like this: 
 
-    git remote add origin git@github.com:sco-bo/sco-bo.github.io
+{% highlight shell %}
+~ $ git remote add origin git@github.com:sco-bo/sco-bo.github.io
+{% endhighlight %}
 
 ### Step 3
 While in your project folder, type the following in your terminal: 
 
-    touch Gemfile
+{% highlight shell %}
+~ $ touch Gemfile
+{% endhighlight %}
 
-This will create a Gemfile in your project's root folder. Open the file in your text editor and add the following to it: 
+This will create a Gemfile in your project's root folder. Open the file in your text editor and add the following to it:
 
-    source 'https://rubygems.org'
-    gem 'github-pages', group: :jekyll_plugins
+{% highlight ruby %}
+source 'https://rubygems.org'
+gem 'github-pages', group: :jekyll_plugins
+{% endhighlight %}
  
 Then, go back to your terminal and run `bundle install`. This will install all the appropriate dependencies for setting up and maintaining Jekyll. According to the documentation of the github-pages gem: 
 
@@ -56,20 +73,26 @@ Then, go back to your terminal and run `bundle install`. This will install all t
 ### Step 4
 Now, in your terminal, type: 
 
-    jekyll new . --force
+{% highlight shell %}
+~ $ jekyll new . --force
+{% endhighlight %}
 
 This should create a bunch of folders and files. Congratulations! These are all the building blocks of your new site! To see what the pages look like, open a new terminal window and type: 
 
-    jekyll serve --watch
+{% highlight shell %}
+~ $ jekyll serve --watch
+{% endhighlight %}
 
 This command starts running a development server, much like `rails server` does in rails projects. To view your site, navigate your browser to http://localhost:4000/. Congrats! This is your new Jekyll site! Now, it probably looks much different from the way you want it to look (what you see is the filler text from Jekyll showing all the possibilities of things you can do) but you have already come a long way. Pat yourself on the back! 
 
 ### Step 5
 We now need to add and commit the changes we've made and push them up to Github. Do this in your terminal by running 
 
-    git add -A
-    git commit -m "Initial jekyll commit"
-    git push -u origin master 
+{% highlight shell %}
+~ $ git add -A
+~ $ git commit -m "Initial jekyll commit"
+~ $ git push -u origin master 
+{% endhighlight %}
 
 It may take a few seconds, but now when you point your browser to **yourusername.github.io** (in my case sco-bo.github.io) you will see your new Jekyll site there! Next comes the exciting part, making this site your own and styling it to be a true reflection of you! To learn more about some of the great features and general structure of Jekyll, consider checking out this video, which was quite helpful to me: 
 
