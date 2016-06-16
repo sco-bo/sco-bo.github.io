@@ -1,5 +1,5 @@
 # Site settings
-title: Scott Bobbitt | Developer
+title: Scott Bobbitt | Rails Developer
 email: scottebobbitt@gmail.com
 description: Ruby on Rails Developer
 baseurl: ""
@@ -15,7 +15,6 @@ sass:
 
 # Build settings
 markdown: kramdown
-
 kramdown: 
   input: GFM
   syntax_highlighter: rouge
