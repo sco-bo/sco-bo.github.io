@@ -1,9 +1,11 @@
 ---
 layout: post
-title:  "Using Jekyll and GitHub Pages to make your static site"
-date:   2016-06-05
+title: "Using Jekyll and GitHub Pages to make your static site"
+date: 2016-06-05
 categories: jekyll
-tags: [jekyll, github]
+tags: 
+  - jekyll 
+  - github
 ---
 
 **Jekyll** is a static site generator, which has become the preferred tool of GitHub Pages. It has also become an ideal service for building a website for your friend's jewelry store in only a weekend. 

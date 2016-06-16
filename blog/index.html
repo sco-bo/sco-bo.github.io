@@ -11,7 +11,12 @@ description: Things I Write
     {% for post in site.posts %}
       <article class="post">
         <h2>{{ post.title }}</h2>
-        <!-- <p class="subheader"><a href="#"><span class="jekyll label">Jekyll</span></a> <a href="#"><span class="github label">GitHub</span></a></p> -->
+        <ul class="tags">
+          Tags:
+          {% for tag in post.tags %}
+            <li><a href="/blog/tags#{{ tag }}" class="tag"><span class="{{ tag }} label">{{ tag }}</span></a></li>
+          {% endfor %}
+        </ul>
         <p>{{ post.content | strip_html | truncatewords: 35}}</p>
         <a href="{{post.url}}" class="ghost button">Read it &rarrlp;</a>
       </article>
